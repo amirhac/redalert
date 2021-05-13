@@ -17,7 +17,7 @@ def is_red_alert():
     for alert in alerts:
         alert_time = datetime.strptime(alert['alertDate'], '%Y-%m-%d %H:%M:%S')
         area = alert['data']
-        seconds_since_alert = (datetime.now() - alert_time).seconds
+        seconds_since_alert = (datetime.now() - alert_time).total_seconds()
         if seconds_since_alert < SECONDS_THRESHOLD and area in AREAS:
             true_alerts.append(alert)
             print(alert)
