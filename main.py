@@ -36,4 +36,4 @@ def send_telegram(msg):
 
 alerts = is_red_alert()
 if alerts:
-    send_telegram("RED ALERT\n" + alerts[-1]['alertDate'] + "\n" + alerts[-1]['data'])
+    send_telegram("RED ALERT\n" + alerts[0]['alertDate'] + "\n" + alerts[0]['data'])
