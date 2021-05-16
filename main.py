@@ -15,7 +15,7 @@ CHAT_IDS = config['CHAT_IDS']
 telegram_enabled = False
 
 mqttc = mqtt.Client("redalert")
-mqttc.connect("localhost", 1884)
+mqttc.connect("localhost", 1883)
 mqttc.loop_start()
 
 
